@@ -1,17 +1,18 @@
-import React from 'react'
+import React, {Component} from 'react'
  
 
-const Card = (props) => {
-    const {email, name , id} = props;
+class Card extends Component {
+render(props){
     return (
-        <div className='bg-light-green dib br3 pa3 ma2 grow bw2 shadow-5'>
-            <img alt='this.name' src={`https://robohash.org/${id}`}></img>
+        <div className='bg-light-purple dib br3 pa3 ma2 grow bw2 shadow-5'>
+            <img alt='this.name' src={`https://robohash.org/${this.props.id}`}></img>
             <div>
-    <h2>{name}</h2>
-    <p>{email}</p>
+    <h2>{this.props.name}</h2>
+    <p>{this.props.email}</p>
             </div>
         </div>
     )
+}
 }
 
 export default Card
