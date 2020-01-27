@@ -2,7 +2,7 @@ import React, {Component} from 'react'
  
 
 class Card extends Component {
-render(props){
+render(){
     return (
         <div className='bg-light-purple dib br3 pa3 ma2 grow bw2 shadow-5'>
             <img alt='this.name' src={`https://robohash.org/${this.props.id}`}></img>
